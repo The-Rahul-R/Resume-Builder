@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+.resume{
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.personal-info {
+    padding: 0px 10px 10px 10px
+}
+
+h1 {
+    text-align: center;
+    margin: 5px 5px;
+}
+
+.details ul {
+    display: inline-flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin:5px;
+    padding: 0;
+}
+.details ul li {
+    color: rgba(34, 15, 39, 0.949);
+}
+.details a {
+    color: rgba(27, 27, 135, 0.949);
+    text-decoration: none;
+}
+/* subgroup styles */
+.divider {
+    border-bottom: 1px solid black;
+    margin: 0 10px;
+}
+.subgroup {
+    margin-bottom: 5px;
+}
+.subgroup h3 {
+    margin:0px 10px;
+}
+.entry{
+    margin: 2px 4px 2px 4px;
+}
+.entry ul {
+    margin-top: 0px;
+    padding-left: 30px;
+}
+.entry ul li {
+    margin-left: 0; /* Remove left margin */
+}
+
+/* education style */
+.entry .uni-details,.course-details {
+    display: flex;
+    justify-content: space-between;
+}
+.entry p {
+    margin: 2px 10px;
+}
+.relevant-courses {
+    padding: 1px 10px;
+}
+
+/* skills style */
+.entry .skill-group {
+    display: flex;
+}
+.entry .skill-group p#skill{
+    flex: 0 0 200px;
+    font-weight: 600;
+}
+
+/* academic styles */

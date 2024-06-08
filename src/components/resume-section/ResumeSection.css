@@ -1,0 +1,10 @@
+
+.resumesection {
+    flex: 2;
+    padding: 10px;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: stretch;
+    flex-grow: 1;
+    background-color: #eff0f8;;
+}

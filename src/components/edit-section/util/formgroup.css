@@ -1,0 +1,67 @@
+/* form group style */
+
+
+.form-row input {
+    min-width: 100%;
+}
+
+.form-row textarea {
+    min-width: 370px;
+    max-width: 100% - 10px;
+    resize: vertical;
+}
+
+
+/* form entry styles */
+.form-entry {
+    display: flex;
+    flex-direction: row;
+    min-width: 100px;
+    max-width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #524141;
+    color: #fff;
+}
+
+.form-entry .info {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-entry button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    margin-left: 5px;
+}
+
+.form-entry button:hover {
+    background-color: #555;
+}
+
+.edit-btn i,
+.delete-btn i {
+    font-size: 16px;
+    color: #bbb;
+}
+
+.edit-btn:hover i {
+    color: #007bff;
+}
+
+.delete-btn:hover i {
+    color: #dc3545;
+}
