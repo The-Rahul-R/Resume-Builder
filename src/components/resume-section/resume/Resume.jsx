@@ -6,14 +6,13 @@ const Resume =forwardRef(({personalData,educationData,skillData,projectData,cert
         <div className='resume' ref={ref}>
             <PersonalDetails name={personalData.name} phone={personalData.mobile} email={personalData.email} location={personalData.location} portfolio={personalData.portfolio} github={personalData.github} linkedin={personalData.linkedin}/>
             <div className='subgroup'>
-                <SubTitle title={'EDUCATION'}/>
-                {
-                    educationData.map(data => {
-                        return (
-                            <EducationDetails key={data.id} uniName={`${data.university}, ${data.location}`} gradStart={data.startDate} gradEnd={data.endDate} degree={data.degree} courses={data.courses} GPA={data.GPA}/>
-                        )
-                    })
-                }
+                <SubTitle title={'WORK EXPERIENCE'}/>
+                {experienceData.map(data => {
+                    return (
+                        <Experience key={data.id} company={data.company} role={data.role} start={data.start}
+                        end={data.end} workDetails={data.workDetails} />
+                    )
+                })}
             </div>
             <div className='subgroup'>
                 <SubTitle title={'SKILLS'}/>
@@ -26,20 +25,21 @@ const Resume =forwardRef(({personalData,educationData,skillData,projectData,cert
                 }
             </div>
             <div className='subgroup'>
-                <SubTitle title={'WORK EXPERIENCE'}/>
-                {experienceData.map(data => {
-                    return (
-                        <Experience key={data.id} company={data.company} role={data.role} start={data.start}
-                        end={data.end} workDetails={data.workDetails} />
-                    )
-                })}
-            </div>
-            <div className='subgroup'>
-                <SubTitle title={'ACADEMIC PROJECTS'}/>
+                <SubTitle title={'NOTABLE PROJECTS'}/>
                 {
                     projectData.map(data => {
                         return (
                             <Projects key={data.id} project={data.project} projectDetail={data.projectDetail} />
+                        )
+                    })
+                }
+            </div>
+            <div className='subgroup'>
+                <SubTitle title={'EDUCATION'}/>
+                {
+                    educationData.map(data => {
+                        return (
+                            <EducationDetails key={data.id} uniName={`${data.university}, ${data.location}`} gradStart={data.startDate} gradEnd={data.endDate} degree={data.degree} courses={data.courses} GPA={data.GPA}/>
                         )
                     })
                 }
@@ -125,7 +125,7 @@ const EducationDetails =({uniName,gradStart,gradEnd,degree,courses,GPA})=> {
             </div>
             <div className='course-details'>
                 <p><i>{degree}</i></p>
-                <p>{`GPA: ${GPA}/4.0`}</p>
+                <p>{`GPA: ${GPA}/10.0`}</p>
             </div>
             <p className='relevant-courses'>{ `Relevant Courses: ${courses}`}</p>
         </div>
@@ -142,7 +142,7 @@ const PersonalDetails =({name,email,phone,location,portfolio,linkedin,github})=>
                 {phone && <li>{`Phone: ${phone}`}</li>}
                 {location && <li>{`Location: ${location}`}</li>}
                 {portfolio && <li>Portfolio: <a href={portfolio}>{portfolio}</a></li>}
-                {github && <li>Github: <a href={github}>{portfolio}</a></li>}
+                {github && <li>Github: <a href={github}>{github}</a></li>}
                 {linkedin && <li>LinkedIn: <a href={linkedin}>{linkedin}</a></li>}
             </ul>
         </div>
